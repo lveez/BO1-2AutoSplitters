@@ -5,6 +5,7 @@ state("BlackOps")
     byte resettime : 0x021FA4CB;
     //int round : 0x16569B6;
     byte roundchange : 0x165695D;
+    byte dead : 0x25A66F4;
     
 }
 
@@ -103,7 +104,7 @@ start
 reset
 {
 
-    if (current.resettime == 105)
+    if (current.resettime == 105 || current.dead == 0)
     {   
 
         vars.loop = 0;
