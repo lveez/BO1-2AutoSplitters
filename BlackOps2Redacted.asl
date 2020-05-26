@@ -1,10 +1,11 @@
 state("t6zmv41")
 {
 
-    byte Paused : 0x2FED9EA;
+    byte Paused : 0x26047E0; 
     // byte resettime : 0x967E50; broken
     int roundreset : 0x1F3B710;
     int round : 0x2D615B90;
+    // byte roundchange : 0x2E44367; doesnt work past 11???
 
 }
 
@@ -40,10 +41,14 @@ init
 
 }
 
+update
+{
+}
+
 isLoading
 {
 
-    if (current.Paused == 08)
+    if (current.Paused == 01)
     {
 
         return true;
@@ -70,10 +75,7 @@ start
 
 }
 
-update
-{
-   return true;
-}
+
 
 reset
 {
