@@ -1,10 +1,4 @@
 # BlackOps2Autosplitter
-Autosplitter for BO2 zombies
+Timer does splits automatically and also starts, pauses and resets automatically.
 
-How to use:
-
-Livesplit -> Edit Layout -> + -> Control -> Scriptable Auto Splitter
-select BlackOps2.asl file
-
-In edit layout double click on Scriptable Auto Splitter and select the rounds you want to split.
-Then add these same rounds in edit splits.
+add Scriptable Auto Splitter to livesplit and select the .asl file. Customize the rounds you want to split on by double clicking on Scriptable Auto Splitter and selecting them. You have to edit the rounds in Edit Splits manually, make sure they match the rounds selected.
