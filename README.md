@@ -1,4 +1,6 @@
 # BlackOps2Autosplitter
+For redacted
+
 Timer does splits automatically and also starts, pauses and resets automatically.
 
 currently splits 5-6 seconds too early, so I need to find a better address for round changes.
