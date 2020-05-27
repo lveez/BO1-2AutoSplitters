@@ -3,7 +3,7 @@ state("BlackOps")
 
     byte Paused : 0x2BF7988;
     byte resettime : 0x021FA4CB;
-    //int round : 0x16569B6;
+    byte round : 0x16569B6;
     byte roundchange : 0x165695D;
     byte dead : 0x25A66F4;
     
@@ -48,26 +48,30 @@ init
 
 update
 {  
+    if (current.round != 0 || vars.round > 1)
+    {
 
-   if (current.roundchange == 0 && current.roundchange != old.roundchange)
-   {
+        if (current.roundchange == 0 && current.roundchange != old.roundchange)
+        {
 
-       if (vars.loop == 0)
-       {
+            if (vars.loop == 0)
+            {
 
-           vars.round += 1;
-           print("round +1");
-           vars.loop = 1;
+                vars.round += 1;
+                print("round +1");
+                vars.loop = 1;
 
-       }
-       else if (vars.loop == 1)
-       {
+            }
+            else if (vars.loop == 1)
+            {
 
-           vars.loop = 0;
+                vars.loop = 0;
 
-       }
+            }
 
-   }
+        }
+
+    }
     
 }
 
