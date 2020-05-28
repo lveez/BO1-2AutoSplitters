@@ -3,7 +3,7 @@ state("t6zmv41")
 
     byte Paused : 0x26047E0; 
     // byte resettime : 0x967E50; broken
-    int roundreset : 0x1F3B710;
+    int roundreset : 0x2617D40; //1F3B710 old
     int round : 0x2D615B90;
     // byte roundchange : 0x2E44367; doesnt work past 11???
 
@@ -80,7 +80,7 @@ start
 reset
 {
 
-    if (current.roundreset == 0)
+    if (current.roundreset == 1)
     {
 
         vars.split = 0;
